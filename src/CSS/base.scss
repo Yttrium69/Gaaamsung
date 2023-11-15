@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+
+//default_element
+$rem_unit: 16px;
+
+//sizes
+$page_padding: 1.5rem;
+$margin-top: 8.5rem;
+$page_width: 73.625rem;
+$frame_left_width: 36rem;
+$frame_right_width: 28.5rem;
+
+// colors
+$background: #E4E4EC;
+$label_0: #244AFB;
+$label_1: #2FEC0B;
+$label_2: #E4F241;
+$label_3: #FA853D;
+$label_4: #F74261;
+$black: #32353C;
+$line_gray: #DCE1E8;
+$font_gray: #4E5968;
+
+//lines
+$gray_line: 1px solid $line_gray;
+
+//effects
+$card_shadow: 0px 4px 8px 0px rgba(161, 170, 179, 0.30);
+
+
+//components > fonts
+
+
+@mixin font_default($color: $black) {
+  color: $color;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170.336%;
+}
+
+@mixin font_large($color: $black) {
+  color: $color;
+  font-family: 'Pretendard';
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin font_huge($color: $black) {
+  color: $color;
+  font-family: 'Pretendard';
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin font_bold($color) {
+  color: $color;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 170.336%;
+}
+
+@mixin font_small($color: $black) {
+  color: $color;
+  font-family: Pretendard;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.02188rem;
+  line-height: 150%;
+}
+
+@mixin font_tiny($color) {
+  color: $color;
+  font-family: Pretendard;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.01875rem;
+}
+
+//components >> buttons
+@mixin btn_filled($color: $blue, $width: "hug") {
+  display: inline-flex;
+  height: 3.125rem;
+  padding: 0.9375rem 1.375rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  border-radius: 0.3125rem;
+  background-color: $color;
+  border: none;
+  @include font_bold(#fff);
+  transition: 0.3s;
+
+  @if ($width =="fill") {
+    display: flex;
+    width: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    // background-color: #576de9;
+  }
+}
+
+@mixin btn_lined($color: $blue, $width: "hug") {
+  display: inline-flex;
+  height: 3.125rem;
+  padding: 0.9375rem 1.375rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  border-radius: 0.3125rem;
+  background-color: #fff;
+  border: 1px solid $blue;
+  @include font_default($blue);
+  transition: 0.3s;
+
+  @if ($width =="fill") {
+    display: flex;
+    width: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #edeff8;
+  }}
+
+
+
+
+html{
+    font-size: 16px;
+}
+
+body{
+    background-color: $background;
+}
+
