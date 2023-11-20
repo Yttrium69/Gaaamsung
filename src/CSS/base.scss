@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+@import url('https://webfontworld.github.io/amore/AritaDotum.css');
+
 
 //default_element
 $rem_unit: 16px;
@@ -15,12 +17,22 @@ $frame_right_width: 28.5rem;
 $background: #E4E4EC;
 $label_0: #244AFB;
 $label_1: #2FEC0B;
-$label_2: #E4F241;
+$label_2: #878787;
 $label_3: #FA853D;
 $label_4: #F74261;
 $black: #32353C;
 $line_gray: #DCE1E8;
 $font_gray: #4E5968;
+
+:export{
+  color{
+    label_0: $label_0;
+    label_1: $label_1;
+    label_2: $label_2;
+    label_3: $label_3;
+    label_4: $label_4;
+  }
+}
 
 //lines
 $gray_line: 1px solid $line_gray;
@@ -32,43 +44,59 @@ $card_shadow: 0px 4px 8px 0px rgba(161, 170, 179, 0.30);
 //components > fonts
 
 
-@mixin font_default($color: $black) {
+@mixin font_default($color: $black, $font: "arita") {
   color: $color;
   font-family: Pretendard;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 170.336%;
+  line-height: 150%;
+
+  @if($font=="arita"){
+  font-family: 'AritaDotum';
+}
 }
 
-@mixin font_large($color: $black) {
+@mixin font_large($color: $black, $font: "pretendard") {
   color: $color;
   font-family: 'Pretendard';
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+@if($font=="arita"){
+  font-family: 'AritaDotum';
+}
 }
 
-@mixin font_huge($color: $black) {
+@mixin font_huge($color: $black, $font: "pretendard") {
   color: $color;
   font-family: 'Pretendard';
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+
+@if($font=="arita"){
+  font-family: 'AritaDotum';
+  line-height: 3.0625rem; /* 136.111% */
+  letter-spacing: -0.0225rem;
+}
 }
 
-@mixin font_bold($color) {
+@mixin font_bold($color, $font: "pretendard") {
   color: $color;
   font-family: Pretendard;
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;
   line-height: 170.336%;
+@if($font=="arita"){
+  font-family: 'AritaDotum';
+}
 }
 
-@mixin font_small($color: $black) {
+@mixin font_small($color: $black, $font: "pretendard") {
   color: $color;
   font-family: Pretendard;
   font-size: 0.875rem;
@@ -77,9 +105,12 @@ $card_shadow: 0px 4px 8px 0px rgba(161, 170, 179, 0.30);
   line-height: normal;
   letter-spacing: -0.02188rem;
   line-height: 150%;
+@if($font=="arita"){
+  font-family: 'AritaDotum';
+}
 }
 
-@mixin font_tiny($color) {
+@mixin font_tiny($color, $font: "pretendard") {
   color: $color;
   font-family: Pretendard;
   font-size: 0.75rem;
@@ -87,6 +118,9 @@ $card_shadow: 0px 4px 8px 0px rgba(161, 170, 179, 0.30);
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.01875rem;
+@if($font=="arita"){
+  font-family: 'AritaDotum';
+}
 }
 
 //components >> buttons
@@ -140,6 +174,23 @@ $card_shadow: 0px 4px 8px 0px rgba(161, 170, 179, 0.30);
   }}
 
 
+@mixin container($width, $height) {
+  width: $width;
+  height: $height;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin card_popped{
+  border-radius: 0.5rem;
+  background: var(--page_neumophism, linear-gradient(151deg, #E8EAEC 35.46%, #FFF 116.39%));
+  box-shadow: 4px 5px 8.4px 0px #c4c7d2, -5px -5px 10px 0px rgba(255, 255, 255, 0.88);
+}
+
 
 
 html{
@@ -149,4 +200,5 @@ html{
 body{
     background-color: $background;
 }
+
 

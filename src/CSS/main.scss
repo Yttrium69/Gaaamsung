@@ -1,6 +1,7 @@
-@import './base.scss';
+@import 'src/CSS/base';
 
 .page_main{
+    $main_height: 70vh;
     width: $page_width;
     margin: auto;
     margin-top: $margin-top;
@@ -8,16 +9,67 @@
     grid-template-columns: $frame_left_width auto;
     column-gap: 8rem;
 
+
     .sect_left{
         width: 100%;
-        height: 45rem;
+        height: $main_height;
         border-radius: 1.25rem;
         background: linear-gradient(345deg, #d7d7e0 -8.85%, #E9EAF2 91.28%);
         box-shadow: 13px 13px 27px 0px rgba(135, 146, 168, 0.39) inset, -9px -10px 51.8px 0px rgba(255, 255, 255, 0.932) inset;
     }
     
     .sect_right{
-        // background-color: green;
+        $btn_height: 3rem;
+
+
+        .menus_container{
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height:calc( $main_height - $btn_height);
+            padding: 1rem;
+            box-sizing: border-box;
+
+            .texts_container{
+                .title{
+                    @include font_huge($font: "arita");
+                }
+                .dscrpt{
+                    @include font_default($color: $font_gray, $font: "pretendard");
+                    margin-top: 1.5rem;
+                }
+            }
+
+            .title_menu_pack{
+                width: 100%;
+                margin-top: 3rem;
+                height: min-content;
+                overflow: hidden;
+                .text_icon_pack{
+                    display: flex;
+                    align-items: center;
+                    column-gap: 0.5rem;
+
+                    .text{
+                        @include font_default($color: $font_gray);
+
+                    }
+                    .icon_container{
+                        @include container(1rem, 1rem);
+                    }
+                }
+                .item_container{
+                    padding: 1rem;
+                    width: 100%;
+                    display: grid;
+                    $grid-gap: 1rem;
+                    grid-template-columns:min-content min-content min-content;
+                    grid-gap: $grid-gap;
+
+                    
+
+                }
+            }
+        }
     }
 }
 

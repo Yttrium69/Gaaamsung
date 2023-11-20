@@ -1,0 +1,20 @@
+// colors
+$background: #E4E4EC;
+$label_0: #244AFB;
+$label_1: #2FEC0B;
+$label_2: #878787;
+$label_3: #FA853D;
+$label_4: #F74261;
+$black: #32353C;
+$line_gray: #DCE1E8;
+$font_gray: #4E5968;
+
+:export{
+  color{
+    label_0: $label_0;
+    label_1: $label_1;
+    label_2: $label_2;
+    label_3: $label_3;
+    label_4: $label_4;
+  }
+}
