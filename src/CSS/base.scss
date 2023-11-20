@@ -24,15 +24,6 @@ $black: #32353C;
 $line_gray: #DCE1E8;
 $font_gray: #4E5968;
 
-:export{
-  color{
-    label_0: $label_0;
-    label_1: $label_1;
-    label_2: $label_2;
-    label_3: $label_3;
-    label_4: $label_4;
-  }
-}
 
 //lines
 $gray_line: 1px solid $line_gray;
@@ -195,10 +186,27 @@ $card_shadow: 0px 4px 8px 0px rgba(161, 170, 179, 0.30);
 
 html{
     font-size: 16px;
+    ::-webkit-scrollbar {
+      width: 12px;
+      background-color: none;
+      cursor: pointer;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #2f354227;
+      width: 4px;
+      cursor: pointer;
+      border-radius: 10rem;
+    }
+    // ::-webkit-scrollbar-track {
+    //   background-color: rgb(107, 21, 21);
+    //   width: 10px;
+    // }
+
 }
 
 body{
     background-color: $background;
+    overflow: hidden;
 }
 
 

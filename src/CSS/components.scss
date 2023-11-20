@@ -1,59 +1,67 @@
 @import 'src/CSS/base';
 
 
-.component_label{
-  .dot{
+.component_label {
+  .dot {
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 10rem;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25) inset;
   }
-  .label_text{
-    @include  font_small();
+
+  .label_text {
+    @include font_small();
   }
+
   display: flex;
   column-gap: 0.5rem;
   align-items: center;
-  &{
-    .back_label_0{
+
+  & {
+    .back_label_0 {
       background-color: $label_0;
     }
 
-    .back_label_1{
+    .back_label_1 {
       background-color: $label_1;
     }
 
-    .back_label_2{
+    .back_label_2 {
       background-color: $label_2;
     }
-    .back_label_3{
+
+    .back_label_3 {
       background-color: $label_3;
     }
-    .back_label_4{
+
+    .back_label_4 {
       background-color: $label_4;
     }
 
-    .font_label_0{
+    .font_label_0 {
       color: $label_0;
     }
 
-    .font_label_1{
+    .font_label_1 {
       color: $label_1;
     }
 
-    .font_label_2{
+    .font_label_2 {
       color: $label_2;
     }
-    .font_label_3{
+
+    .font_label_3 {
       color: $label_3;
     }
-    .font_label_4{
+
+    .font_label_4 {
       color: $label_4;
-    }}
+    }
+  }
 
 }
 
-.component_tag{
+.component_tag {
   @include font_small($color: $font_gray, $font: "pretendard");
   padding: 0.2rem 0.5rem;
   border-radius: 10rem;
@@ -63,32 +71,41 @@
 }
 
 
-.component_menu{
+.component_menu {
   $width: 9rem;
   $padding: 0.5rem;
   width: $width;
   padding: $padding;
   box-sizing: border-box;
   @include card_popped();
-  .product_sample_img{
+
+  .product_sample_img {
     width: calc($width - 2*$padding);
     height: calc($width - 2*$padding);
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .img_container{
+
+  .img_container {
     @include container(100%, auto);
+    border-radius: 0.3rem;
   }
-  .contents_container{
+
+  .contents_container {
     display: flex;
     row-gap: 0.5rem;
     flex-direction: column;
-    .component_label{
+
+    .component_label {
       //components_lable.css
     }
-    .title{    @include font_large($font: "arita");}
-    .component_tags_container{
+
+    .title {
+      @include font_large($font: "arita");
+    }
+
+    .component_tags_container {
       //components_tag.css
       display: flex;
       flex-shrink: 0;
@@ -97,7 +114,7 @@
     }
   }
 
-  &:hover{
+  &:hover {
     cursor: pointer;
     background: var(--page_neumophism, linear-gradient(151deg, #E8EAEC 35.46%, #FFF 116.39%));
     box-shadow: 2px 2px 3px 0px #BABECC, -2px -2px 3px 0px rgba(255, 255, 255, 0.88);
