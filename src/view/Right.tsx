@@ -20,8 +20,23 @@ function Notes(props: { note: string, callback: any }): JSX.Element {
     </div>);
 }
 
+function is_everynotes_selected(top:string|null, middle:string|null, base:string|null){
+    return top!=null&&middle!=null&&base!=null;
+}
+
 
 function Right(props: any): JSX.Element {
+
+    const buttons = {
+        true: <button className='button_order true' onClick={()=>{alert("주문이 완료되었습니다.")}}>주문하기</button>,
+        false:<button className='button_order false' onClick={()=>{alert("3가지 재료를 모두 선택하세요.")}}>주문안됨</button>
+    }
+    let button_to_show:JSX.Element;
+
+    is_everynotes_selected(props.top, props.middle, props.base)?
+    button_to_show = buttons.true:button_to_show = buttons.false;
+
+    
 
     return (
         <div className="sect_right">
@@ -39,7 +54,10 @@ function Right(props: any): JSX.Element {
 
             </div>
             <div className='scroll_shader_bottom' />
-            <button className='button_order'>주문하기</button>
+            <div className='btn_container'>
+                {button_to_show}
+            </div>
+
         </div >
     );
 }

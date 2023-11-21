@@ -1,6 +1,6 @@
 @import 'src/CSS/base';
 
-.page_main{
+.page_main {
     $main_height: 70vh;
     width: $page_width;
     margin: auto;
@@ -10,10 +10,8 @@
     column-gap: 8rem;
 
 
-    .sect_left{
-        
-
-
+    .sect_left {
+        position: relative;
         width: 100%;
         height: $main_height;
         border-radius: 1.25rem;
@@ -21,12 +19,12 @@
         box-shadow: 13px 13px 27px 0px rgba(135, 146, 168, 0.39) inset, -9px -10px 51.8px 0px rgba(255, 255, 255, 0.932) inset;
 
 
-        .perfume_liquid_pack{
+        .perfume_liquid_pack {
             position: relative;
             height: 100%;
             width: 100%;
-  
-            img{
+
+            img {
                 // opacity: 0.5;
                 // border: 10px soild red;
                 z-index: 10;
@@ -40,101 +38,237 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform:translate(-50%, -50%);
+                transform: translate(-50%, -50%);
                 background: none;
             }
 
-            .selected_liquid_container{
+            .selected_liquid_container {
+                $liquid_height: 14rem;
+                $top_height : 1rem;
+                $middle_height: 4rem;
                 position: absolute;
                 // background-color: blue;
-                // opacity: 0.5;
+                opacity: 0.4;
                 width: 4rem;
-                height: 2rem;
+                height: 14rem;
                 bottom: 10.4rem;
+                top: 50%;
                 left: 50%;
-
+                transform:translate(-42%, -27%);
                 position: relative;
-                width: 100%;
-                height: 100%;
-                // transform:translateX(-42%);
                 border-radius: 0.4rem;
                 z-index: 1;
+
+                .transperent{
+                    background-color: none;
+                }
+                .top{
+                    height: $top_height ;
+                }
+                .middle{
+                    height: $middle_height;
+                }
+                .base{
+                    height: calc($liquid_height - $top_height - $middle_height);
+                }
+            }
+        }
+
+        .cards_container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            .card {
+                position: absolute;
+                width: fit-content;
+
+                .component_menu_left {
+                    position: relative;
+                    height: 10rem;
+                    width: 12rem;
+
+                    .component_menu {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+
+                        &:hover {
+                            outline: 2px solid #FF002E;
+                            box-shadow: 149px 5px 0px 0px rgba(255, 0, 46, 0.09) inset;
+
+                        }
+                    }
+                }
+
+                &.base {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(20%, 60%);
+                }
+
+                &.middle {
+                    top: 50%;
+                    left: 50%;
+
+                    transform: translate(-117%, -90%);
+
+                    .component_menu_left {
+                        height: 7rem;
+
+                        .component_menu {
+                            height: fit-content;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+
+                        }
+                    }
+
+                    img {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+
+                &.top {
+                    top: 50%;
+                    left: 50%;
+
+                    transform: translate(20%, -124%);
+
+                    .component_menu_left {
+                        height: 11rem;
+
+                    }
+
+                    .component_menu {
+                        height: fit-content;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+
+                    }
+
+                    img {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
 
             }
         }
     }
-    
-    .sect_right{
-        $btn_height: 3rem;
-        position: relative;
-            width: 100%;
-            height: 100%;
-            
-            .scroll_shader_top{
-                width: 97%;
-                height: 3%;
-                left: 0;
-                top: 0;
-                position: absolute;
-                background: linear-gradient(180deg, rgb(228, 228, 236) 10%, #e4e4ec00 90%);
-            }
-            .scroll_shader_bottom{
-                width: 97%;
-                height: 3%;
-                left: 0;
-                bottom: $btn_height;
-                position: absolute;
-                background: linear-gradient(180deg, rgba(228, 228, 236, 0.00) 9.3%, #E4E4EC 51.16%);
-                
-            }
 
-    
-        .menus_container{
-            
+    .sect_right {
+        $btn_height: 3.5rem;
+        $right_row_gap: 1rem;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+
+        .scroll_shader_top {
+            width: 97%;
+            height: 3%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            background: linear-gradient(180deg, rgb(228, 228, 236) 10%, #e4e4ec00 90%);
+        }
+
+        .scroll_shader_bottom {
+            width: 97%;
+            height: 3%;
+            left: 0;
+            bottom: calc($btn_height + $right_row_gap);
+            position: absolute;
+            background: linear-gradient(180deg, rgba(228, 228, 236, 0.00) 9.3%, #E4E4EC 51.16%);
+
+        }
+
+
+        .menus_container {
             overflow-y: scroll;
             overflow-x: hidden;
-            height:calc( $main_height - $btn_height);
+            height: calc($main_height - $btn_height - $right_row_gap);
+            margin-bottom: $right_row_gap;
             padding: 1rem;
             box-sizing: border-box;
 
-            .texts_container{
-                .title{
+            .texts_container {
+                .title {
                     @include font_huge($font: "arita");
                 }
-                .dscrpt{
+
+                .dscrpt {
                     @include font_default($color: $font_gray, $font: "pretendard");
                     margin-top: 1.5rem;
                 }
             }
 
-            .component_notes{
+            .component_notes {
                 width: 100%;
                 margin-top: 3rem;
                 height: min-content;
                 overflow: hidden;
-                .text_icon_pack{
+
+                .text_icon_pack {
                     display: flex;
                     align-items: center;
                     column-gap: 0.5rem;
 
-                    .text{
+                    .text {
                         @include font_default($color: $font_gray);
 
                     }
-                    .icon_container{
+
+                    .icon_container {
                         @include container(1rem, 1rem);
                     }
                 }
-                .item_container{
+
+                .item_container {
                     padding: 1rem;
                     width: 100%;
                     display: grid;
                     $grid-gap: 1rem;
-                    grid-template-columns:min-content min-content min-content;
+                    grid-template-columns: min-content min-content min-content;
                     grid-gap: $grid-gap;
+                }
+            }
+        }
+
+        .btn_container {
+            width: 100%;
+            height: $btn_height;
+            padding: 0.25rem 0;
+            box-sizing: border-box;
+            bottom: 0;
+
+            button {
+                width: 100%;
+                height: 100%;
+                border-radius: 10rem;
+                outline: none;
+                border: none;
+                background-color: #333B47;
+                color: white;
+                @include font_default($color: "white", $font: "arita");
+                cursor: pointer;
+                &:hover{
+                    filter: brightness(1.2);
+                }
+                &.false{
+                    background-color: #CDD2D9;
+                    color: #989DA6;
+                    filter: none;
                 }
             }
         }
     }
 }
-

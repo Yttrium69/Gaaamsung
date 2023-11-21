@@ -69,12 +69,15 @@ function Menu(props: any): JSX.Element {
             </div>
         </div>
         : <div className={"product_sample_img"}></div>;
-    props.note ? style_hide = { "display": "none" } : style_hide = {}
+    props.note ? style_hide = { "display": "none" } : style_hide = {};
+
+    let title_to_pass_upward:string|null;
+    props.img_path ? title_to_pass_upward = props.title: title_to_pass_upward = null;
     return (
-        <div className={`component_menu ${props.title}`} onClick={() => { props.callback(props.note, props.title) }}>
+        <div className={`component_menu ${props.title}`} onClick={() => { props.callback(props.note, title_to_pass_upward) }}>
             {menu_img}
             <div className="contents_container">
-                <Label label={0}></Label>
+                <Label label={props.label}></Label>
                 <div className="title">{props.title}</div>
                 <Tags_container tags={props.tag} />
             </div>

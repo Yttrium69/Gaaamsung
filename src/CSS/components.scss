@@ -1,6 +1,51 @@
 @import 'src/CSS/base';
 
 
+
+
+  .back_label_0 {
+    background-color: $label_0;
+  }
+
+  .back_label_1 {
+    background-color: $label_1;
+  }
+
+  .back_label_2 {
+    background-color: $label_2;
+  }
+
+  .back_label_3 {
+    background-color: $label_3;
+  }
+
+  .back_label_4 {
+    background-color: $label_4;
+  }
+
+  .font_label_0 {
+    color: $label_0;
+  }
+
+  .font_label_1 {
+    color: $label_1;
+  }
+
+  .font_label_2 {
+    color: $label_2;
+  }
+
+  .font_label_3 {
+    color: $label_3;
+  }
+
+  .font_label_4 {
+    color: $label_4;
+  }
+
+
+
+
 .component_label {
   .dot {
     width: 0.5rem;
@@ -111,6 +156,7 @@
       flex-shrink: 0;
       flex-wrap: wrap;
       gap: 0.2rem;
+      z-index: 0;
     }
   }
 
@@ -118,5 +164,9 @@
     cursor: pointer;
     background: var(--page_neumophism, linear-gradient(151deg, #E8EAEC 35.46%, #FFF 116.39%));
     box-shadow: 2px 2px 3px 0px #BABECC, -2px -2px 3px 0px rgba(255, 255, 255, 0.88);
+    &:hover{
+      filter: brightness(0.975);
+      filter: drop-shadow();
+  }
   }
 }

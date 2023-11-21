@@ -30,8 +30,8 @@ function Main(): JSX.Element {
 
     return (
         <div className="page_main">
-            <Left top={selected.top} base={selected.base} middle={selected.middle} />
-            <Right callback={update_selected_item} />
+            <Left callback={update_selected_item} top={selected.top} middle={selected.middle} base={selected.base} />
+            <Right  top={selected.top} middle={selected.middle} base={selected.base}  callback={update_selected_item} />
         </div>
     );
 }

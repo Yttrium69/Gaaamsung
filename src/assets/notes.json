@@ -1,119 +1,119 @@
 [
     {
-        "name": "Citrus",
-        "label": 0,
-        "tags": [
-            "유쾌",
-            "귀여운"
-        ],
-        "note": "base"
+    "name": "Citrus",
+    "label": 0,
+    "tags": [
+    "상큼한",
+    "귀여운"
+    ],
+    "note": "base"
     },
     {
-        "name": "Musk",
-        "label": 3,
-        "tags": [
-            "달달한",
-            "중성적인"
-        ],
-        "note": "middle"
+    "name": "Musk",
+    "label": 3,
+    "tags": [
+    "진중한",
+    "중성적인"
+    ],
+    "note": "middle"
     },
     {
-        "name": "Woody",
-        "label": 1,
-        "tags": [
-            "차분한",
-            "남성적인"
-        ],
-        "note": "middle"
+    "name": "Woody",
+    "label": 1,
+    "tags": [
+    "신선한",
+    "남성적인"
+    ],
+    "note": "middle"
     },
     {
-        "name": "Citrus",
-        "label": 0,
-        "tags": [
-            "상큼한",
-            "여성적인"
-        ],
-        "note": "middle"
+    "name": "Citrus",
+    "label": 0,
+    "tags": [
+    "발랄한",
+    "여성적인"
+    ],
+    "note": "middle"
     },
     {
-        "name": "coconut",
-        "label": 2,
-        "tags": [
-            "시원한",
-            "남성적인"
-        ],
-        "note": "middle"
+    "name": "coconut",
+    "label": 2,
+    "tags": [
+    "고소한",
+    "묵직한"
+    ],
+    "note": "middle"
     },
     {
-        "name": "strawberry",
-        "label": 1,
-        "tags": [
-            "묵직한",
-            "남성적인"
-        ],
-        "note": "top"
+    "name": "strawberry",
+    "label": 1,
+    "tags": [
+    "새콤달콤한",
+    "발랄한"
+    ],
+    "note": "top"
     },
     {
-        "name": "flowder",
-        "label": 4,
-        "tags": [
-            "부드러운",
-            "여성적인"
-        ],
-        "note": "base"
+    "name": "flowder",
+    "label": 4,
+    "tags": [
+    "부드러운",
+    "아름다운"
+    ],
+    "note": "base"
     },
     {
-        "name": "Floral",
-        "label": 3,
-        "tags": [
-            "꽃향기",
-            "여성적인"
-        ],
-        "note": "base"
+    "name": "Floral",
+    "label": 3,
+    "tags": [
+    "우아한",
+    "청초한"
+    ],
+    "note": "base"
     },
     {
-        "name": "Bergamot",
-        "label": 0,
-        "tags": [
-            "우아한",
-            "상큼한"
-        ],
-        "note": "base"
+    "name": "Bergamot",
+    "label": 0,
+    "tags": [
+    "싱그러운",
+    "달콤한"
+    ],
+    "note": "base"
     },
     {
-        "name": "Vanilla",
-        "label": 4,
-        "tags": [
-            "달콤한",
-            "묵직한"
-        ],
-        "note": "base"
+    "name": "Vanilla",
+    "label": 4,
+    "tags": [
+    "부드러운",
+    "편안한"
+    ],
+    "note": "base"
     },
     {
-        "name": "Lavender",
-        "label": 4,
-        "tags": [
-            "달콤한",
-            "묵직한"
-        ],
-        "note": "top"
+    "name": "Lavender",
+    "label": 4,
+    "tags": [
+    "깨끗한",
+    "신선한"
+    ],
+    "note": "top"
     },
     {
-        "name": "Minty",
-        "label": 0,
-        "tags": [
-            "시원한",
-            "상큼한"
-        ],
-        "note": "top"
+    "name": "Minty",
+    "label": 0,
+    "tags": [
+    "시원한",
+    "상큼한"
+    ],
+    "note": "top"
     },
     {
-        "name": "Eucalyptus",
-        "label": 2,
-        "tags": [
-            "차분한",
-            "우아한"
-        ],
-        "note": "top"
+    "name": "Eucalyptus",
+    "label": 2,
+    "tags": [
+    "상쾌한",
+    "청량한"
+    ],
+    "note": "top"
     }
-]
+    ]
