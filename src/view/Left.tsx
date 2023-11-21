@@ -7,7 +7,6 @@ function search_note(name: string) {
     const target_note = notes.filter(note => note.name == name);
 
     if (target_note.length == 0) return null;
-    console.log(name, target_note[0]);
     return target_note[0];
 }
 

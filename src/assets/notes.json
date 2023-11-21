@@ -1,6 +1,6 @@
 [
     {
-    "name": "Citrus",
+    "name": "citrus",
     "label": 0,
     "tags": [
     "상큼한",
@@ -9,7 +9,7 @@
     "note": "base"
     },
     {
-    "name": "Musk",
+    "name": "musk",
     "label": 3,
     "tags": [
     "진중한",
@@ -18,7 +18,7 @@
     "note": "middle"
     },
     {
-    "name": "Woody",
+    "name": "woody",
     "label": 1,
     "tags": [
     "신선한",
@@ -27,7 +27,7 @@
     "note": "middle"
     },
     {
-    "name": "Citrus",
+    "name": "citrus",
     "label": 0,
     "tags": [
     "발랄한",
@@ -63,7 +63,7 @@
     "note": "base"
     },
     {
-    "name": "Floral",
+    "name": "floral",
     "label": 3,
     "tags": [
     "우아한",
@@ -72,7 +72,7 @@
     "note": "base"
     },
     {
-    "name": "Bergamot",
+    "name": "bergamot",
     "label": 0,
     "tags": [
     "싱그러운",
@@ -81,7 +81,7 @@
     "note": "base"
     },
     {
-    "name": "Vanilla",
+    "name": "vanilla",
     "label": 4,
     "tags": [
     "부드러운",
@@ -90,7 +90,7 @@
     "note": "base"
     },
     {
-    "name": "Lavender",
+    "name": "lavender",
     "label": 4,
     "tags": [
     "깨끗한",
@@ -99,7 +99,7 @@
     "note": "top"
     },
     {
-    "name": "Minty",
+    "name": "minty",
     "label": 0,
     "tags": [
     "시원한",
@@ -108,7 +108,7 @@
     "note": "top"
     },
     {
-    "name": "Eucalyptus",
+    "name": "eucalyptus",
     "label": 2,
     "tags": [
     "상쾌한",
