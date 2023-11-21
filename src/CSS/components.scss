@@ -170,3 +170,34 @@
   }
   }
 }
+
+
+.component_nav{
+  background-color: $background;
+  width: 100vw;
+  height: 4rem;
+  border-bottom: 1px solid #d5d8dc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  line-height: 100%;
+  .left_right_pack{
+    width: $page_width;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left{
+      .logo{
+        cursor: pointer;
+      }
+    }
+    .right{
+      display: flex;
+      column-gap: 2rem;
+      @include font_default($black);
+      
+    }
+  }
+}

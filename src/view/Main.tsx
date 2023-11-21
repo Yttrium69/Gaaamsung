@@ -18,15 +18,8 @@ function Main(): JSX.Element {
         let now_selected: selected_notes = { ...selected };
         now_selected[note!] = item;
         setSelected(now_selected);
-        // console.log(item);
-        // console.log(selected);
+
     }
-
-    function gogo_callback(target: any) {
-        console.log(target);
-    }
-
-
 
     return (
         <div className="page_main">

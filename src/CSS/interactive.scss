@@ -1,0 +1,130 @@
+@import 'src/CSS/base';
+@import 'src/CSS/main';
+@import 'src/CSS/components';
+
+@media screen and (max-width: 500px) {
+    .mobile {
+        $page_width : 95vw;
+        $main_height: 100vh;
+        $margin-top: 4rem;
+
+        * {
+            overflow-y: visible;
+            #btn {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100vw;
+                height: 5rem;
+                padding: 0.5rem;
+                z-index: 10000000;
+                background-color: $background;
+
+    
+                button {
+                    height: 3rem;
+                    z-index: 10000000;
+                    border-radius: 0.5rem;
+                }
+            }
+        }
+
+        .component_nav {
+            background-color: #e4e4ec35;
+            backdrop-filter: blur(25px);
+            width: 100vw;
+
+            .left_right_pack {
+                width: 95vw;
+                justify-content: center;
+
+                .right {
+                    display: none;
+                }
+            }
+        }
+
+        .page_main {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            // overflow: scroll;
+            width: $page_width;
+            height: calc(100vh - 10rem);
+            gap: 1.5rem;
+            margin-top: 4rem;
+
+
+            .texts_container {
+                margin-top: 2rem;
+            }
+
+            .scroll_shader_bottom,
+            .scroll_shader_top {
+                display: none;
+            }
+
+            .sect_left {
+                display: none;
+                background-color: blue;
+                width: 100%;
+                height: 30vh;
+
+            }
+
+            .sect_right {
+                padding-bottom: 10rem;
+                overflow: visible;
+
+                .menus_container {
+                    height: 100%;
+                }
+
+                .component_notes {
+                    width: 100%;
+                    // margin-top: 3rem;
+                    height: min-content;
+                    // overflow: hidden;
+
+                    .text_icon_pack {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 0.5rem;
+
+                        .text {
+                            @include font_default($color: $font_gray);
+
+                        }
+
+                        .icon_container {
+                            @include container(1rem, 1rem);
+                        }
+                    }
+
+                    .item_container {
+                        padding: 0.7rem;
+
+                        // display: grid;
+                        // $grid-gap: 1rem;
+                        // grid-template-columns: min-content min-content min-content;
+                        // grid-gap: $grid-gap;
+                        // background-color: green;
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-grow: 1;
+                        flex-shrink: 1;
+
+                        .component_notes {
+                            width: 100%;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        
+
+
+    }
+}

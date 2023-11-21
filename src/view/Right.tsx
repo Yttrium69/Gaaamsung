@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Menu from '../component/Menu';
 import notes from '../assets/notes.json';
+// import { useMediaQuery } from 'react-responsive'
 import $ from 'jquery';
 
 
@@ -26,15 +27,30 @@ function is_everynotes_selected(top:string|null, middle:string|null, base:string
 
 
 function Right(props: any): JSX.Element {
+    // const isDesktopOrMobile = useMediaQuery({query: '(max-width:500px)'});
 
     const buttons = {
-        true: <button className='button_order true' onClick={()=>{alert("주문이 완료되었습니다.")}}>주문하기</button>,
-        false:<button className='button_order false' onClick={()=>{alert("3가지 재료를 모두 선택하세요.")}}>주문안됨</button>
+        true: <button className='button_order true' onClick={()=>{alert("주문이 완료되었습니다. 감사합니다")}}>주문하기</button>,
+        false:<button className='button_order false' onClick={()=>{alert("3가지 재료를 모두 선택하세요.")}}>주문하기</button>,
+        mobile:<button className='button_order false' onClick={()=>{alert("PC 버전에서 이용 가능한 기능입니다. PC 버전에서 더 많은 기능을 만나 보세요!")}}>주문하기</button>
     }
     let button_to_show:JSX.Element;
+    
+    const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+      const resizeListener = () => {
+        setInnerWidth(window.innerWidth);
+      };
+      window.addEventListener("resize", resizeListener);
+    });
 
     is_everynotes_selected(props.top, props.middle, props.base)?
     button_to_show = buttons.true:button_to_show = buttons.false;
+
+    if(innerWidth<=500){
+        button_to_show = buttons.mobile;
+    }
 
     
 
@@ -54,7 +70,7 @@ function Right(props: any): JSX.Element {
 
             </div>
             <div className='scroll_shader_bottom' />
-            <div className='btn_container'>
+            <div id='btn' className='btn_container'>
                 {button_to_show}
             </div>
 
