@@ -10,7 +10,7 @@ import './CSS/interactive.scss';
 function App() {
   return (
     <div className="App mobile">
-      <Nav left={{text:null, link: '/', img:{src:'LOGO.svg', width:"7.5rem"}}} right={[{text:"About US", link:"/about"}, {text:"Order", link:"/order"}]}/>
+      <Nav left={{text:null, link: '/', img:{src:'LOGO.svg', width:"7rem"}}} right={[{text:"About US", link:"/about"}, {text:"Order", link:"/order"}]}/>
       <Router>
         <Routes>
           <Route
