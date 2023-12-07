@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Menu from '../component/Menu';
 import notes from '../assets/notes.json';
+import SSketch from '../component/sketch';
 
 
 function search_note(name: string) {
@@ -26,7 +27,8 @@ function Menu_left(props: { name: string, callback: any, note: string }) {
 function Left(props: any): JSX.Element {
     return (
         <div className="sect_left">
-            <div className='perfume_liquid_pack'>
+            <SSketch />
+            {/* <div className='perfume_liquid_pack'>
                 <div className='img_container'>
                     <img src='img/main/perfume.png'></img>
                 </div>
@@ -46,8 +48,9 @@ function Left(props: any): JSX.Element {
                 <div className='card base'>
                     <Menu_left name={props.base} callback={props.callback} note={"base"} />
                 </div>
-            </div>
+            </div> */}
         </div>
+
     );
 }
 

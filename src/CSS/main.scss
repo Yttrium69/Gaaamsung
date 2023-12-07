@@ -11,68 +11,71 @@
 
 
     .sect_left {
-        position: relative;
+        // position: relative;
+        // width: 100%;
+        // height: $main_height;
+        // border-radius: 1.25rem;
+        // background: linear-gradient(345deg, #d7d7e0 -8.85%, #E9EAF2 91.28%);
+        // box-shadow: 13px 13px 27px 0px rgba(135, 146, 168, 0.39) inset, -9px -10px 51.8px 0px rgba(255, 255, 255, 0.932) inset;
+
+
+        // .perfume_liquid_pack {
+        //     position: relative;
+        //     height: 100%;
+        //     width: 100%;
+
+        //     img {
+        //         // opacity: 0.5;
+        //         // border: 10px soild red;
+        //         z-index: 10;
+        //         position: fixed;
+        //         background: none;
+        //     }
+
+
+        //     .img_container {
+        //         @include container(14.5rem, 25.75rem);
+        //         position: absolute;
+        //         top: 50%;
+        //         left: 50%;
+        //         transform: translate(-50%, -50%);
+        //         background: none;
+        //     }
+
+        //     .selected_liquid_container {
+        //         $liquid_height: 14rem;
+        //         $top_height : 1rem;
+        //         $middle_height: 4rem;
+        //         position: absolute;
+        //         // background-color: blue;
+        //         opacity: 0.4;
+        //         width: 4rem;
+        //         height: 14rem;
+        //         bottom: 10.4rem;
+        //         top: 50%;
+        //         left: 50%;
+        //         transform:translate(-42%, -27%);
+        //         position: relative;
+        //         border-radius: 0.4rem;
+        //         z-index: 1;
+
+        //         .transperent{
+        //             background-color: none;
+        //         }
+        //         .top{
+        //             height: $top_height ;
+        //         }
+        //         .middle{
+        //             height: $middle_height;
+        //         }
+        //         .base{
+        //             height: calc($liquid_height - $top_height - $middle_height);
+        //         }
+        //     }
         width: 100%;
-        height: $main_height;
-        border-radius: 1.25rem;
-        background: linear-gradient(345deg, #d7d7e0 -8.85%, #E9EAF2 91.28%);
-        box-shadow: 13px 13px 27px 0px rgba(135, 146, 168, 0.39) inset, -9px -10px 51.8px 0px rgba(255, 255, 255, 0.932) inset;
-
-
-        .perfume_liquid_pack {
-            position: relative;
-            height: 100%;
-            width: 100%;
-
-            img {
-                // opacity: 0.5;
-                // border: 10px soild red;
-                z-index: 10;
-                position: fixed;
-                background: none;
-            }
-
-
-            .img_container {
-                @include container(14.5rem, 25.75rem);
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: none;
-            }
-
-            .selected_liquid_container {
-                $liquid_height: 14rem;
-                $top_height : 1rem;
-                $middle_height: 4rem;
-                position: absolute;
-                // background-color: blue;
-                opacity: 0.4;
-                width: 4rem;
-                height: 14rem;
-                bottom: 10.4rem;
-                top: 50%;
-                left: 50%;
-                transform:translate(-42%, -27%);
-                position: relative;
-                border-radius: 0.4rem;
-                z-index: 1;
-
-                .transperent{
-                    background-color: none;
-                }
-                .top{
-                    height: $top_height ;
-                }
-                .middle{
-                    height: $middle_height;
-                }
-                .base{
-                    height: calc($liquid_height - $top_height - $middle_height);
-                }
-            }
-        }
+        height: 100%;
+        background-color: gray;
+        
 
         .cards_container {
             position: absolute;
