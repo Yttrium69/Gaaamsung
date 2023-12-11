@@ -4,7 +4,7 @@ import notes from '../assets/notes.json';
 import SSketch from '../component/sketch';
 
 
-function search_note(name: string) {
+function search_note(name: string | null) {
     const target_note = notes.filter(note => note.name == name);
 
     if (target_note.length == 0) return null;
@@ -25,9 +25,14 @@ function Menu_left(props: { name: string, callback: any, note: string }) {
 
 
 function Left(props: any): JSX.Element {
+
+    // if (props) {
+    //     props.base ? color_arr.push(search_note(props.base).label) : null;
+    // }
+
     return (
         <div className="sect_left">
-            <SSketch />
+            <SSketch selected={props} />
             {/* <div className='perfume_liquid_pack'>
                 <div className='img_container'>
                     <img src='img/main/perfume.png'></img>
